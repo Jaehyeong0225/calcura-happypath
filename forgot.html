@@ -20,7 +20,6 @@
       <div class="card">
         <h2 class="hello">Reset Password</h2>
 
-        <!-- STEP 1: Email -->
         <div id="stepEmail">
           <label class="label" for="resetEmail">Email Address</label>
           <input id="resetEmail" class="input" type="email" placeholder="Email Address" />
@@ -28,7 +27,6 @@
           <p id="msg1" style="margin:12px 0 0;"></p>
         </div>
 
-        <!-- STEP 2: OTP -->
         <div id="stepOtp" style="display:none; margin-top:16px;">
           <label class="label" for="otp">Verification Code</label>
           <input id="otp" class="input" type="text" placeholder="Enter the code" />
@@ -36,7 +34,6 @@
           <p id="msg2" style="margin:12px 0 0;"></p>
         </div>
 
-        <!-- STEP 3: New Password -->
         <div id="stepNewPw" style="display:none; margin-top:16px;">
           <label class="label" for="newPw">New Password</label>
           <input id="newPw" class="input" type="password" placeholder="New Password" />
@@ -56,8 +53,7 @@
   </main>
 
   <script>
-    // ✅ Phase I mock: "이메일로 인증코드를 보낸 것처럼" 동작시키기
-    // Send를 누르면 랜덤 6자리 코드를 생성하고, OTP 입력칸을 보여줌
+
     let generatedOtp = "";
 
     const emailEl = document.getElementById("resetEmail");
@@ -87,12 +83,10 @@
 
 
     
-      // OTP 단계 표시
       stepOtp.style.display = "block";
       otpEl.value = "";
       otpEl.focus();
 
-      // 새 비번 단계는 아직 숨김
       stepNewPw.style.display = "none";
     });
 
