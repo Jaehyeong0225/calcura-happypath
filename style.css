@@ -129,3 +129,96 @@ body {
     min-height: 42vh;
   }
 }
+
+/* ✅ Responsive improvements */
+
+/* 전체 split이 좁아지면 세로로 쌓이게 */
+@media (max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+  }
+
+  .left, .right {
+    padding: 24px;
+  }
+
+  /* 브랜드 영역 높이 줄이고 깔끔하게 */
+  .left {
+    min-height: 38vh;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+  .brand-name {
+    font-size: 36px;
+  }
+
+  .tagline {
+    font-size: 14px;
+  }
+
+  /* 카드가 화면에 딱 맞게 */
+  .card {
+    width: 100%;
+    max-width: 420px;
+    padding: 22px 20px;
+    border-radius: 16px;
+  }
+}
+
+/* ✅ 아주 작은 폰(아이폰 SE급) */
+@media (max-width: 420px) {
+  .left {
+    min-height: 34vh;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .brand-name {
+    font-size: 30px;
+  }
+
+  .hello {
+    font-size: 24px;
+  }
+
+  .input {
+    padding: 11px;
+  }
+
+  .btn {
+    padding: 11px;
+  }
+}
+
+/* ✅ 태블릿(가로/세로 중간 사이즈) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .split {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .card {
+    width: min(420px, 90%);
+  }
+}
+
+.card {
+  width: min(380px, 92vw);
+}
+
+.brand-name {
+  font-size: clamp(28px, 4vw, 44px);
+}
+
+.logo {
+  width: clamp(120px, 18vw, 220px);
+}
