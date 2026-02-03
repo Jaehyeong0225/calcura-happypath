@@ -130,3 +130,78 @@ body {
   }
 }
 
+
+@media (max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+  }
+
+  .left, .right {
+    padding: 24px;
+  }
+
+  .left {
+    min-height: 38vh;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+  .brand-name {
+    font-size: 36px;
+  }
+
+  .tagline {
+    font-size: 14px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 420px;
+    padding: 22px 20px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .left {
+    min-height: 34vh;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .brand-name {
+    font-size: 30px;
+  }
+
+  .hello {
+    font-size: 24px;
+  }
+
+  .input {
+    padding: 11px;
+  }
+
+  .btn {
+    padding: 11px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .split {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .card {
+    width: min(420px, 90%);
+  }
+}
+
